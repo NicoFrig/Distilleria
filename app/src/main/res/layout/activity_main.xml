@@ -25,7 +25,7 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/rounded_outline_edittext"
-        android:hint="Nome"
+        android:hint="Giorgio"
         android:inputType="textPersonName"
         android:text=""
         android:paddingVertical="5dp"
