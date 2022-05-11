@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".RegisterActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -21,7 +23,7 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/rounded_outline_edittext"
-        android:hint="Username"
+        android:hint="Nome"
         android:inputType="textPersonName"
         android:text=""
         android:paddingVertical="5dp"
@@ -37,8 +39,8 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/rounded_outline_edittext"
-        android:hint="Password"
-        android:inputType="textPassword"
+        android:hint="Cognome"
+        android:inputType="textPersonName"
         android:text=""
         android:paddingVertical="5dp"
         android:paddingHorizontal="7.5dp"
@@ -46,56 +48,78 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
-    <Button
-        android:id="@+id/login"
+    <EditText
+        android:id="@+id/editText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="50dp"
-        android:text="Accedi"
-        android:textStyle="bold"
-        app:backgroundTint="@null"
-        android:background="@drawable/rounded_button"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_outline_edittext"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:text=""
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="7.5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
-    <Button
-        android:id="@+id/loginGoogle"
+    <EditText
+        android:id="@+id/editText4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="100dp"
-        android:text="Accedi con Google"
-        android:textStyle="bold"
-        app:backgroundTint="@null"
-        android:background="@drawable/rounded_button"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_outline_edittext"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:text=""
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="7.5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
-    <Button
-        android:id="@+id/loginFacebook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="20dp"
-        android:text="Accedi con Facebook"
-        android:textStyle="bold"
-        app:backgroundTint="@null"
-        android:background="@drawable/rounded_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginGoogle" />
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_outline_edittext"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:text=""
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="7.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+    <Button
+        android:id="@+id/signIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Registrati"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+    <ImageButton
+        android:id="@+id/backArrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="16dp"
-        android:text="oppure registrati"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginFacebook" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

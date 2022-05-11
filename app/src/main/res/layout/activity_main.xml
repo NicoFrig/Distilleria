@@ -25,7 +25,7 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/rounded_outline_edittext"
-        android:hint="Nome"
+        android:hint="Username"
         android:inputType="textPersonName"
         android:text=""
         android:paddingVertical="5dp"
@@ -41,54 +41,6 @@
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/rounded_outline_edittext"
-        android:hint="Cognome"
-        android:inputType="textPersonName"
-        android:text=""
-        android:paddingVertical="5dp"
-        android:paddingHorizontal="7.5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_outline_edittext"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:text=""
-        android:paddingVertical="5dp"
-        android:paddingHorizontal="7.5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_outline_edittext"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        android:text=""
-        android:paddingVertical="5dp"
-        android:paddingHorizontal="7.5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
-
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_outline_edittext"
         android:hint="Password"
         android:inputType="textPassword"
         android:text=""
@@ -96,20 +48,60 @@
         android:paddingHorizontal="7.5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <Button
-        android:id="@+id/signIn"
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="50dp"
-        android:text="Registrati"
+        android:text="Accedi"
         android:textStyle="bold"
         app:backgroundTint="@null"
         android:background="@drawable/rounded_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <Button
+        android:id="@+id/loginGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="100dp"
+        android:text="Accedi con Google"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+    <Button
+        android:id="@+id/loginFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Accedi con Facebook"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginGoogle" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:clickable="true"
+        android:text="@string/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginFacebook" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
