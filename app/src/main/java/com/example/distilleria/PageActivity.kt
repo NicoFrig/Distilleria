@@ -16,8 +16,8 @@ class PageActivity : AppCompatActivity() {
             .add(R.id.fragment_home_page, HomePageFragment())
             .commit()
 
-        var drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
-        var menu = findViewById<ImageButton>(R.id.imageButton)
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
+        val menu = findViewById<ImageButton>(R.id.imageButton)
 
         menu.setOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)

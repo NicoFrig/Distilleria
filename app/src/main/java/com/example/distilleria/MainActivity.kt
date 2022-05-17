@@ -13,14 +13,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var login = findViewById<Button>(R.id.login)
+        val login = findViewById<Button>(R.id.login)
         login.setOnClickListener {
             val intent = Intent(this, PageActivity::class.java)
             startActivity(intent)
             finish()
         }
 
-        var register = findViewById<TextView>(R.id.register)
+        val register = findViewById<TextView>(R.id.register)
         register.setOnClickListener{
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
