@@ -15,4 +15,10 @@
         android:name="com.example.distilleria.ShopFragment"
         android:label="fragment_shop"
         tools:layout="@layout/fragment_shop" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.distilleria.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+
 </navigation>

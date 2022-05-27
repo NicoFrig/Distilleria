@@ -21,7 +21,7 @@
         android:title="Impostazioni" />
 
     <item
-        android:id="@+id/info"
+        android:id="@+id/infoFragment"
         android:icon="@drawable/ic_baseline_info_24"
         android:title="Informazioni" />
 

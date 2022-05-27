@@ -3,4 +3,13 @@
     <string name="register">oppure registrati <u>qui</u></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="infoTitolo"><b>INFORMAZIONI</b></string>
+    <string name="chiSiamoTitolo">Chi siamo ?</string>
+    <string name="chiSiamoContenuto">Siamo nati nel 1890, pochi anni dopo l’Italia, sotto il sole di Castelnuovo Don Bosco, un’area dalla profonda tradizione vinicola tra Torino e il Monferrato. Affondiamo le radici in un patrimonio inestimabile di ricette, di segreti e di conoscenze preziose che si tramandano da quattro generazioni e che sfidano il passare del tempo mantenendo intatto il loro valore.</string>
+    <string name="doveSiamoTitolo">Dove siamo ?</string>
+    <string name="doveSiamoContenuto">Viale Europa, 3, 14022 \nCastelnuovo Don Bosco (AT)</string>
+    <string name="recapiti">Recapiti...</string>
+    <string name="numeroTelefono">Numero di telefono :\n011 987 6159</string>
+    <string name="email">Mail di contatto :\ninfo@distilleriaquaglia.it</string>
+    <string name="links">Ci puoi trovare\nanche su\nInstagram e facebook</string>
 </resources>
