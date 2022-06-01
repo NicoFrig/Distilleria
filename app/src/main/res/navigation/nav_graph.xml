@@ -21,4 +21,10 @@
         android:label="fragment_info"
         tools:layout="@layout/fragment_info" />
 
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.distilleria.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+
 </navigation>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context=".DetailFragment">
+
+    <ScrollView
+        android:id="@+id/detailScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:paddingBottom="72dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp" >
+
+            <ImageView
+                android:id="@+id/imageDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/chinotto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/titleDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Liquore al chinotto"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageDetail" />
+
+            <TextView
+                android:id="@+id/descriptionDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detailChinotto"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:paddingHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleDetail" />
+
+            <TextView
+                android:id="@+id/descriptionDetail2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detailChinotto2"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:paddingHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionDetail" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="70cl"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descriptionDetail2"/>
+
+            <TextView
+                android:id="@+id/degree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="35% ALC/VOL"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/quantity"/>
+
+            <TextView
+                android:id="@+id/priceDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="€20,50"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/degree" />
+
+            <TextView
+                android:id="@+id/meno"
+                android:layout_width="35dp"
+                android:layout_height="60dp"
+                android:background="#5FFFFFFF"
+                android:text="-"
+                android:textColor="@color/white"
+                android:paddingTop="12dp"
+                android:textSize="26dp"
+                android:textAlignment="center"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/degree"/>
+
+            <TextView
+                android:id="@+id/charQuantity"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border_white"
+                android:text="1"
+                android:textColor="@color/white"
+                android:paddingTop="12dp"
+                android:textSize="26dp"
+                android:textAlignment="center"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintStart_toEndOf="@id/meno"
+                app:layout_constraintTop_toTopOf="@id/meno"/>
+
+            <TextView
+                android:id="@+id/piu"
+                android:layout_width="35dp"
+                android:layout_height="60dp"
+                android:background="#5FFFFFFF"
+                android:text="+"
+                android:textColor="@color/white"
+                android:paddingTop="12dp"
+                android:textSize="26dp"
+                android:textAlignment="center"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintStart_toEndOf="@id/charQuantity"
+                app:layout_constraintTop_toTopOf="@id/charQuantity"/>
+
+            <TextView
+                android:id="@+id/charAdd"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border_white"
+                android:text="Aggiungi al carrello"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:textAlignment="center"
+                android:layout_marginRight="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/meno"/>
+
+            <TextView
+                android:id="@+id/categoriesDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoria:"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/meno" />
+
+            <TextView
+                android:id="@+id/categoryDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Liquori"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintStart_toEndOf="@id/categoriesDetail"
+                app:layout_constraintTop_toBottomOf="@id/meno" />
+
+            <TextView
+                android:id="@+id/linesDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Linea:"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="4dp"
+                app:layout_constraintEnd_toStartOf="@id/lineDetail"
+                app:layout_constraintTop_toBottomOf="@id/meno" />
+
+            <TextView
+                android:id="@+id/lineDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vintage"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/meno" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>
