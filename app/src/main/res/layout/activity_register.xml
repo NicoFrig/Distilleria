@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/logo2" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/cognome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
@@ -46,10 +46,10 @@
         android:paddingHorizontal="7.5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/nome" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
@@ -62,10 +62,10 @@
         android:paddingHorizontal="7.5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/cognome" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
@@ -78,10 +78,10 @@
         android:paddingHorizontal="7.5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
@@ -94,7 +94,7 @@
         android:paddingHorizontal="7.5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <Button
         android:id="@+id/signIn"
@@ -108,7 +108,7 @@
         android:background="@drawable/rounded_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <ImageButton
         android:id="@+id/backArrow"

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "434055673254",
+    "project_id": "distilleria-quaglia-data",
+    "storage_bucket": "distilleria-quaglia-data.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434055673254:android:093d420ba9a45b1add8b67",
+        "android_client_info": {
+          "package_name": "com.example.distilleria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434055673254-n2qjniro6l0tu4cc6i2rdc17qkbcf4bp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXH8WSPrM1GlasVvcBodxALgOg0K8nR8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434055673254-n2qjniro6l0tu4cc6i2rdc17qkbcf4bp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

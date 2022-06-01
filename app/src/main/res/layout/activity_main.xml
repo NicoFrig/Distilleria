@@ -19,13 +19,13 @@
         app:srcCompat="@drawable/logo2" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/rounded_outline_edittext"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:text=""
         android:paddingVertical="5dp"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
@@ -48,7 +48,7 @@
         android:paddingHorizontal="7.5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <Button
         android:id="@+id/login"
@@ -62,7 +62,7 @@
         android:background="@drawable/rounded_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
         android:id="@+id/loginGoogle"
