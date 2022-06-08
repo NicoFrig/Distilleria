@@ -14,7 +14,11 @@
         android:id="@+id/shopFragment"
         android:name="com.example.distilleria.ShopFragment"
         android:label="fragment_shop"
-        tools:layout="@layout/fragment_shop" />
+        tools:layout="@layout/fragment_shop" >
+        <action
+            android:id="@+id/action_shopFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/infoFragment"
         android:name="com.example.distilleria.InfoFragment"
@@ -22,7 +26,7 @@
         tools:layout="@layout/fragment_info" />
 
     <fragment
-        android:id="@+id/settings"
+        android:id="@+id/detailFragment"
         android:name="com.example.distilleria.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
