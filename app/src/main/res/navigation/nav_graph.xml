@@ -35,4 +35,10 @@
             app:destination="@id/shopFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/cart"
+        android:name="com.example.distilleria.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+
 </navigation>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".CartFragment">
+
+    <ScrollView
+        android:id="@+id/shopScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:paddingBottom="72dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp" >
+
+            <TextView
+                android:id="@+id/cartTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Carrello"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageCart"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/chinotto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cartTitle" />
+
+            <TextView
+                android:id="@+id/detailCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Liquore al chinotto"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintStart_toEndOf="@+id/imageCart"
+                app:layout_constraintTop_toTopOf="@+id/imageCart" />
+
+            <TextView
+                android:id="@+id/priceCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="€ 20,50"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintStart_toEndOf="@+id/imageCart"
+                app:layout_constraintTop_toBottomOf="@+id/detailCart" />
+
+            <TextView
+                android:id="@+id/cartMeno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/priceCart"
+                app:layout_constraintTop_toTopOf="@+id/priceCart" />
+
+            <TextView
+                android:id="@+id/cartNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cartMeno"
+                app:layout_constraintStart_toEndOf="@+id/cartMeno"
+                app:layout_constraintTop_toTopOf="@+id/cartMeno" />
+
+            <TextView
+                android:id="@+id/cartPiu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cartMeno"
+                app:layout_constraintStart_toEndOf="@+id/cartNumber"
+                app:layout_constraintTop_toTopOf="@+id/cartMeno" />
+
+            <TextView
+                android:id="@+id/deleteButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/delete_button"
+                android:text="X"
+                android:paddingLeft="10dp"
+                android:paddingTop="1dp"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailCart" />
+
+            <EditText
+                android:id="@+id/editPromoCode"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="32dp"
+                android:background="@drawable/border_white"
+                android:text="Codice promozionale"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/cartMeno" />
+
+            <EditText
+                android:id="@+id/promoCodeListener"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="32dp"
+                android:background="@color/white"
+                android:text="Applica codice promozionale"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/editPromoCode" />
+
+            <TableLayout
+                android:id="@+id/containerCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:paddingBottom="8dp"
+                android:background="@drawable/border_white"
+                app:layout_constraintTop_toBottomOf="@+id/promoCodeListener">
+
+                <TextView
+                    android:id="@+id/totalCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingLeft="32dp"
+                    android:text="Carrello"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/white"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:paddingLeft="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </TableLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

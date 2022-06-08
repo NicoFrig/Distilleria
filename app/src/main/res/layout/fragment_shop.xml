@@ -19,6 +19,7 @@
             android:layout_height="match_parent"
             android:paddingBottom="20dp" >
 
+
             <TextView
                 android:id="@+id/shopTitle"
                 android:layout_width="wrap_content"
@@ -36,8 +37,9 @@
                 android:id="@+id/filter"
                 android:layout_width="150dp"
                 android:layout_height="24dp"
-                android:layout_marginLeft="32dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="32dp"
+                android:paddingTop="2dp"
                 android:background="@drawable/rounded_outline_edittext"
                 android:backgroundTint="@color/white"
                 android:text="Filtri"
@@ -50,8 +52,9 @@
                 android:id="@+id/orderBy"
                 android:layout_width="150dp"
                 android:layout_height="24dp"
-                android:layout_marginRight="32dp"
+                android:layout_marginRight="16dp"
                 android:layout_marginTop="32dp"
+                android:paddingTop="2dp"
                 android:text="Ordina per"
                 android:textAlignment="center"
                 android:textColor="@color/black"
