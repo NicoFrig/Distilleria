@@ -50,7 +50,7 @@ class ShopFragment : Fragment() {
 //              val frag=activity?.supportFragmentManager?.beginTransaction()
 //              frag?.replace(R.id.fragmentContainer, DetailFragment())
 //              frag?.disallowAddToBackStack()
-//              frag?.commit()
+//              frag?.commit(
 
             NavHostFragment.findNavController(this).navigate(R.id.action_shopFragment_to_detailFragment)
         }
