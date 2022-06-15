@@ -16,265 +16,276 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingTop="16dp">
 
-            <TextView
-                android:id="@+id/category1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="Vermouth"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <LinearLayout
-                android:id="@+id/layout1"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/category1">
-
-                <ImageView
-                    android:id="@+id/image1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="146dp"
-                    android:layout_weight="0.8"
-                    android:layout_marginLeft="32dp"
-                    android:src="@drawable/quaglia_vermouth_bianco_ombra" />
-
-                <TextView
-                    android:id="@+id/description1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="112dp"
-                    android:layout_weight="0.2"
-                    android:layout_marginTop="16dp"
-                    android:paddingLeft="32dp"
-                    android:paddingRight="32dp"
-                    android:visibility="invisible"
-                    android:justificationMode="inter_word"
-                    android:text="Vermouth e liquori intensi, profondi, eleganti. Lunghe infusioni di erbe aromatiche sulle orme di ricette antiche rivisitate in chiave moderna."
-                    android:textColor="@color/white"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/category2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="Amari"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout1" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:id="@+id/layout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/category2">
+            </androidx.recyclerview.widget.RecyclerView>
 
-                <TextView
-                    android:id="@+id/description2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="112dp"
-                    android:layout_weight="0.2"
-                    android:layout_marginTop="16dp"
-                    android:paddingLeft="32dp"
-                    android:paddingRight="32dp"
-                    android:justificationMode="inter_word"
-                    android:visibility="invisible"
-                    android:text="Liquori alle erbe declinati in due versioni: classica per chi ama i gusti caldi e agrumati, balsamica per chi preferisce le sfumature fresche."
-                    android:textColor="@color/white"
-                    android:textSize="16dp" />
+<!--            <TextView-->
+<!--                android:id="@+id/category1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:text="Vermouth"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="18dp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-                <ImageView
-                    android:id="@+id/image2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="146dp"
-                    android:layout_weight="0.8"
-                    android:layout_marginRight="32dp"
-                    android:src="@drawable/amaroclassico_ombra_quaglia" />
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layout1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/category1">-->
 
-            </LinearLayout>
+<!--                <ImageView-->
+<!--                    android:id="@+id/image1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="146dp"-->
+<!--                    android:layout_weight="0.8"-->
+<!--                    android:layout_marginLeft="32dp"-->
+<!--                    android:src="@drawable/quaglia_vermouth_bianco_ombra" />-->
 
-            <TextView
-                android:id="@+id/category3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="Vermouth"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout2" />
+<!--                <TextView-->
+<!--                    android:id="@+id/description1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="112dp"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:paddingLeft="32dp"-->
+<!--                    android:paddingRight="32dp"-->
+<!--                    android:visibility="invisible"-->
+<!--                    android:justificationMode="inter_word"-->
+<!--                    android:text="Vermouth e liquori intensi, profondi, eleganti. Lunghe infusioni di erbe aromatiche sulle orme di ricette antiche rivisitate in chiave moderna."-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="16dp" />-->
 
-            <LinearLayout
-                android:id="@+id/layout3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/category3">
+<!--            </LinearLayout>-->
 
-                <ImageView
-                    android:id="@+id/image3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="146dp"
-                    android:layout_weight="0.8"
-                    android:layout_marginLeft="32dp"
-                    android:src="@drawable/quaglia_vermouth_bianco_ombra" />
+<!--            <TextView-->
+<!--                android:id="@+id/category2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:text="Amari"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="18dp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/layout1" />-->
 
-                <TextView
-                    android:id="@+id/description3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="112dp"
-                    android:layout_weight="0.2"
-                    android:layout_marginTop="16dp"
-                    android:paddingLeft="32dp"
-                    android:paddingRight="32dp"
-                    android:justificationMode="inter_word"
-                    android:visibility="invisible"
-                    android:text="Vermouth e liquori intensi, profondi, eleganti. Lunghe infusioni di erbe aromatiche sulle orme di ricette antiche rivisitate in chiave moderna."
-                    android:textColor="@color/white"
-                    android:textSize="16dp" />
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layout2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/category2">-->
 
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:id="@+id/description2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="112dp"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:paddingLeft="32dp"-->
+<!--                    android:paddingRight="32dp"-->
+<!--                    android:justificationMode="inter_word"-->
+<!--                    android:visibility="invisible"-->
+<!--                    android:text="Liquori alle erbe declinati in due versioni: classica per chi ama i gusti caldi e agrumati, balsamica per chi preferisce le sfumature fresche."-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="16dp" />-->
 
-            <TextView
-                android:id="@+id/category4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="Amari"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout3" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/image2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="146dp"-->
+<!--                    android:layout_weight="0.8"-->
+<!--                    android:layout_marginRight="32dp"-->
+<!--                    android:src="@drawable/amaroclassico_ombra_quaglia" />-->
 
-            <LinearLayout
-                android:id="@+id/layout4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/category4">
+<!--            </LinearLayout>-->
 
-                <TextView
-                    android:id="@+id/description4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="112dp"
-                    android:layout_weight="0.2"
-                    android:layout_marginTop="16dp"
-                    android:paddingLeft="32dp"
-                    android:paddingRight="32dp"
-                    android:visibility="invisible"
-                    android:justificationMode="inter_word"
-                    android:text="Liquori alle erbe declinati in due versioni: classica per chi ama i gusti caldi e agrumati, balsamica per chi preferisce le sfumature fresche."
-                    android:textColor="@color/white"
-                    android:textSize="16dp" />
+<!--            <TextView-->
+<!--                android:id="@+id/category3"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:text="Vermouth"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="18dp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/layout2" />-->
 
-                <ImageView
-                    android:id="@+id/image4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="146dp"
-                    android:layout_weight="0.8"
-                    android:layout_marginRight="32dp"
-                    android:src="@drawable/amaroclassico_ombra_quaglia" />
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layout3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/category3">-->
 
-            </LinearLayout>
+<!--                <ImageView-->
+<!--                    android:id="@+id/image3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="146dp"-->
+<!--                    android:layout_weight="0.8"-->
+<!--                    android:layout_marginLeft="32dp"-->
+<!--                    android:src="@drawable/quaglia_vermouth_bianco_ombra" />-->
 
-            <TextView
-                android:id="@+id/category5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="Vermouth"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout4" />
+<!--                <TextView-->
+<!--                    android:id="@+id/description3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="112dp"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:paddingLeft="32dp"-->
+<!--                    android:paddingRight="32dp"-->
+<!--                    android:justificationMode="inter_word"-->
+<!--                    android:visibility="invisible"-->
+<!--                    android:text="Vermouth e liquori intensi, profondi, eleganti. Lunghe infusioni di erbe aromatiche sulle orme di ricette antiche rivisitate in chiave moderna."-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="16dp" />-->
 
-            <LinearLayout
-                android:id="@+id/layout5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/category5">
+<!--            </LinearLayout>-->
 
-                <ImageView
-                    android:id="@+id/image5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="146dp"
-                    android:layout_weight="0.8"
-                    android:layout_marginLeft="32dp"
-                    android:src="@drawable/quaglia_vermouth_bianco_ombra" />
+<!--            <TextView-->
+<!--                android:id="@+id/category4"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:text="Amari"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="18dp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/layout3" />-->
 
-                <TextView
-                    android:id="@+id/description5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="112dp"
-                    android:layout_weight="0.2"
-                    android:layout_marginTop="16dp"
-                    android:paddingLeft="32dp"
-                    android:paddingRight="32dp"
-                    android:visibility="invisible"
-                    android:justificationMode="inter_word"
-                    android:text="Vermouth e liquori intensi, profondi, eleganti. Lunghe infusioni di erbe aromatiche sulle orme di ricette antiche rivisitate in chiave moderna."
-                    android:textColor="@color/white"
-                    android:textSize="16dp" />
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layout4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/category4">-->
 
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:id="@+id/description4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="112dp"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:paddingLeft="32dp"-->
+<!--                    android:paddingRight="32dp"-->
+<!--                    android:visibility="invisible"-->
+<!--                    android:justificationMode="inter_word"-->
+<!--                    android:text="Liquori alle erbe declinati in due versioni: classica per chi ama i gusti caldi e agrumati, balsamica per chi preferisce le sfumature fresche."-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="16dp" />-->
 
-            <TextView
-                android:id="@+id/category6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="Amari"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout5" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/image4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="146dp"-->
+<!--                    android:layout_weight="0.8"-->
+<!--                    android:layout_marginRight="32dp"-->
+<!--                    android:src="@drawable/amaroclassico_ombra_quaglia" />-->
 
-            <LinearLayout
-                android:id="@+id/layout6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/category6">
+<!--            </LinearLayout>-->
 
-                <TextView
-                    android:id="@+id/description6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="112dp"
-                    android:layout_weight="0.2"
-                    android:layout_marginTop="16dp"
-                    android:paddingLeft="32dp"
-                    android:paddingRight="32dp"
-                    android:visibility="invisible"
-                    android:justificationMode="inter_word"
-                    android:text="Liquori alle erbe declinati in due versioni: classica per chi ama i gusti caldi e agrumati, balsamica per chi preferisce le sfumature fresche."
-                    android:textColor="@color/white"
-                    android:textSize="16dp" />
+<!--            <TextView-->
+<!--                android:id="@+id/category5"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:text="Vermouth"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="18dp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/layout4" />-->
 
-                <ImageView
-                    android:id="@+id/image6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="146dp"
-                    android:layout_weight="0.8"
-                    android:layout_marginRight="32dp"
-                    android:src="@drawable/amaroclassico_ombra_quaglia" />
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layout5"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/category5">-->
 
-            </LinearLayout>
+<!--                <ImageView-->
+<!--                    android:id="@+id/image5"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="146dp"-->
+<!--                    android:layout_weight="0.8"-->
+<!--                    android:layout_marginLeft="32dp"-->
+<!--                    android:src="@drawable/quaglia_vermouth_bianco_ombra" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/description5"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="112dp"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:paddingLeft="32dp"-->
+<!--                    android:paddingRight="32dp"-->
+<!--                    android:visibility="invisible"-->
+<!--                    android:justificationMode="inter_word"-->
+<!--                    android:text="Vermouth e liquori intensi, profondi, eleganti. Lunghe infusioni di erbe aromatiche sulle orme di ricette antiche rivisitate in chiave moderna."-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="16dp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/category6"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:text="Amari"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="18dp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/layout5" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/layout6"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/category6">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/description6"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="112dp"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:paddingLeft="32dp"-->
+<!--                    android:paddingRight="32dp"-->
+<!--                    android:visibility="invisible"-->
+<!--                    android:justificationMode="inter_word"-->
+<!--                    android:text="Liquori alle erbe declinati in due versioni: classica per chi ama i gusti caldi e agrumati, balsamica per chi preferisce le sfumature fresche."-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="16dp" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/image6"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="146dp"-->
+<!--                    android:layout_weight="0.8"-->
+<!--                    android:layout_marginRight="32dp"-->
+<!--                    android:src="@drawable/amaroclassico_ombra_quaglia" />-->
+
+<!--            </LinearLayout>-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

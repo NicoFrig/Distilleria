@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         auth = Firebase.auth
         db = FirebaseFirestore.getInstance()
         email = findViewById(R.id.email)
