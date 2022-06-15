@@ -49,7 +49,11 @@ class RegisterActivity : AppCompatActivity() {
                     if (currentUser != null) {
                         db.collection("users").document(currentUser.uid).set(userHashMap)
                             .addOnCompleteListener {
+
                                 Toast.makeText(this, "User Created", Toast.LENGTH_SHORT).show()
+                                val intent = Intent(this, MainActivity::class.java)
+                                startActivity(intent)
+                                finish()
                             }
                             .addOnFailureListener {
                                 Toast.makeText(this, "Failed Creating", Toast.LENGTH_SHORT)
@@ -75,10 +79,5 @@ class RegisterActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        val currentUser = auth.currentUser
-
-        if (currentUser != null) {
-            Toast.makeText(this, "User already logged in", Toast.LENGTH_SHORT).show()
-        }
     }
 }
