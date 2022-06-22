@@ -1,6 +1,6 @@
 package com.example.distilleria
 
-import android.media.Image
+import androidx.lifecycle.ViewModel
 
-class LiquorItem (var title:String, var description:String){
+class LiquorItem (var title:String, var description:String) : ViewModel(){
 }

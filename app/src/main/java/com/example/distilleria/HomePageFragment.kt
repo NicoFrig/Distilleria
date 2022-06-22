@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ScrollView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -48,18 +49,18 @@ class HomePageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         db=FirebaseFirestore.getInstance()
-        db.collection("lines").get().addOnCompleteListener {
-            if(it.isSuccessful){
-                for (document in it.result)
-                {
-                    var title = document.data["nome"].toString()
-                    var desc = document.data["descrizione"].toString()
+        for(i in 8 downTo 1)
+        {
+            db.collection("lines").document(i.toString()).get().addOnCompleteListener {
+                if(it.isSuccessful){
+                    var title = it.result.data?.get("nome").toString()
+                    var desc = it.result.data?.get("descrizione").toString()
                     val nuovoLiq = LiquorItem(title,desc)
                     liquorList.add(nuovoLiq)
+                    val recycleView = view.findViewById<RecyclerView>(R.id.recycle)
+                    recycleView.adapter = LiquorAdapter(liquorList, requireContext())
+                    recycleView.layoutManager=LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL,false)
                 }
-                val recycleView = view.findViewById<RecyclerView>(R.id.recycle)
-                recycleView.adapter = LiquorAdapter(liquorList, requireActivity())
-                recycleView.layoutManager=LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL,false)
             }
         }
     }
