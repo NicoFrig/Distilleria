@@ -51,11 +51,12 @@ class HomePageFragment : Fragment() {
         db=FirebaseFirestore.getInstance()
         for(i in 8 downTo 1)
         {
+            liquorList.clear()
             db.collection("lines").document(i.toString()).get().addOnCompleteListener {
-                if(it.isSuccessful){
+                if (it.isSuccessful) {
                     var title = it.result.data?.get("nome").toString()
                     var desc = it.result.data?.get("descrizione").toString()
-                    val nuovoLiq = LiquorItem(title,desc)
+                    val nuovoLiq = LiquorItem(title, desc)
                     liquorList.add(nuovoLiq)
                     val recycleView = view.findViewById<RecyclerView>(R.id.recycle)
                     recycleView.adapter = LiquorAdapter(liquorList, requireContext())
