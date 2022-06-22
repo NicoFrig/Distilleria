@@ -46,6 +46,27 @@ class LiquorAdapter(private val liquorList: ArrayList<LiquorItem>, private val c
                 "Amari 1890" -> {
                     holder.img.setImageResource(R.drawable.amaroclassico_ombra_quaglia)
                 }
+                "Bèrto" -> {
+                    holder.img.setImageResource(R.drawable.quaglia_vermouth_bianco_ombra)
+                }
+                "Liquori Alpini" -> {
+                    holder.img.setImageResource(R.drawable.liquorialpini)
+                }
+                "Le grappe" -> {
+                    holder.img.setImageResource(R.drawable.grappe)
+                }
+                "I Classici Italiani" -> {
+                    holder.img.setImageResource(R.drawable.classici)
+                }
+                "Vintage" -> {
+                    holder.img.setImageResource(R.drawable.vintage)
+                }
+                "Elixir" -> {
+                    holder.img.setImageResource(R.drawable.elixir_limoncello_quaglia)
+                }
+                "Mr. Quail & JT" -> {
+                    holder.img.setImageResource(R.drawable.mrquail)
+                }
             }
 
 //        }
