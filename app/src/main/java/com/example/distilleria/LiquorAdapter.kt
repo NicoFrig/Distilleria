@@ -4,16 +4,20 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.RecyclerView
 
 class LiquorAdapter(private val liquorList: ArrayList<LiquorItem>, private val context: Context):
     RecyclerView.Adapter<LiquorAdapter.ViewHolder>(){
+
     var cont = 1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -68,15 +72,29 @@ class LiquorAdapter(private val liquorList: ArrayList<LiquorItem>, private val c
                     holder.img.setImageResource(R.drawable.mrquail)
                 }
             }
-
-//        }
+            holder.view.setOnClickListener {
+                mListener?.selectItem(position)
+//           Navigation.createNavigateOnClickListener(R.id.action_homePageFragment_to_shopFragment)
+//            //NavHostFragment.findNavController().navigate(R.id.action_homePageFragment_to_shopFragment)
+            }
     }
 
     override fun getItemCount() = liquorList.size
 
-    class ViewHolder (ItemView: View) : RecyclerView.ViewHolder(ItemView){
-        val titolo1: TextView = itemView.findViewById(R.id.category1)
-        val desc1: TextView = itemView.findViewById(R.id.description1)
-        val img: ImageView = itemView.findViewById(R.id.image1)
+    interface AdapterCallback {
+        fun selectItem(position: Int)
+    }
+
+    private var mListener: AdapterCallback? = null
+
+    fun setOnCallback(mItemClickListener: AdapterCallback){
+        mListener=mItemClickListener
+    }
+
+    class ViewHolder (val view: ViewGroup) : RecyclerView.ViewHolder(view){
+        val titolo1: TextView = view.findViewById(R.id.category1)
+        val desc1: TextView = view.findViewById(R.id.description1)
+        val img: ImageView = view.findViewById(R.id.image1)
+        val layout: LinearLayout = view.findViewById(R.id.layout1)
     }
 }

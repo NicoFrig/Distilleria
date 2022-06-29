@@ -9,10 +9,7 @@
         <entry key="..\:/Users/USER/Desktop/Distilleria/app/src/main/res/drawable/style.xml" value="0.158" />
         <entry key="..\:/Users/USER/Desktop/Distilleria/app/src/main/res/layout/activity_main.xml" value="0.24615384615384617" />
         <entry key="..\:/Users/USER/Desktop/Distilleria/app/src/main/res/layout/activity_page.xml" value="0.25" />
-        <entry key="..\:/Users/USER/Desktop/Distilleria/app/src/main/res/layout/fragment_cart.xml" value="0.24615384615384617" />
         <entry key="..\:/Users/USER/Desktop/Distilleria/app/src/main/res/layout/fragment_home_page.xml" value="0.25" />
-        <entry key="..\:/Users/USER/Desktop/Distilleria/app/src/main/res/layout/liquor_item.xml" value="0.25" />
-        <entry key="..\:/Users/USER/Desktop/Distilleria/app/src/main/res/layout/liquor_item_reverse.xml" value="0.25" />
         <entry key="..\:/Users/USER/Desktop/Distilleria/app/src/main/res/menu/navigation_menu.xml" value="0.25" />
         <entry key="..\:/Users/USER/Desktop/Distilleria/app/src/main/res/menu/style.xml" value="0.25" />
         <entry key="..\:/Users/USER/OneDrive/Desktop/Distilleria/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.158" />
@@ -26,6 +23,7 @@
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.1715" />
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2265" />
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1715" />
+        <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/drawable/rounded_button.xml" value="0.201" />
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/drawable/styles.xml" value="0.2265" />
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/font/style.xml" value="0.209375" />
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/layout/activity_login.xml" value="0.25" />
@@ -38,6 +36,7 @@
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/layout/fragment_info.xml" value="0.264" />
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/layout/fragment_shop.xml" value="0.25" />
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/layout/liquor_item.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/layout/liquor_item_reverse.xml" value="0.264" />
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/menu/navigation_menu.xml" value="0.25" />
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/Distilleria/app/src/main/res/xml/style.xml" value="0.25" />
         <entry key="..\:/Users/nfrig/Desktop/Scuola/Android/prova/Distilleria/app/src/main/res/layout/activity_page.xml" value="0.25" />

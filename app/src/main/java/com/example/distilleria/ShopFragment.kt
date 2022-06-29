@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.fragment.NavHostFragment
+import com.google.firebase.firestore.FirebaseFirestore
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,6 +24,7 @@ class ShopFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var db:FirebaseFirestore
 
     private lateinit var prod: ImageView
 
@@ -44,15 +46,16 @@ class ShopFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        prod = view.findViewById(R.id.product1)
+//        prod = view.findViewById(R.id.product1)
+        db = FirebaseFirestore.getInstance()
 
-        prod.setOnClickListener{
+//        prod.setOnClickListener{
 //              val frag=activity?.supportFragmentManager?.beginTransaction()
 //              frag?.replace(R.id.fragmentContainer, DetailFragment())
 //              frag?.disallowAddToBackStack()
 //              frag?.commit(
 
-            NavHostFragment.findNavController(this).navigate(R.id.action_shopFragment_to_detailFragment)
-        }
+           //NavHostFragment.findNavController(this).navigate(R.id.action_shopFragment_to_detailFragment)
+//        }
     }
 }

@@ -7,7 +7,7 @@
     android:background="@color/background"
     tools:context=".ShopFragment">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/shopScroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,148 +19,156 @@
             android:layout_height="match_parent"
             android:paddingBottom="20dp" >
 
-
-            <TextView
-                android:id="@+id/shopTitle"
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="Negozio"
-                android:textColor="@color/white"
-                android:textSize="24dp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+            </androidx.recyclerview.widget.RecyclerView>
 
-            <TextView
-                android:id="@+id/filter"
-                android:layout_width="150dp"
-                android:layout_height="24dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="32dp"
-                android:paddingTop="2dp"
-                android:background="@drawable/rounded_outline_edittext"
-                android:backgroundTint="@color/white"
-                android:text="Filtri"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/shopTitle" />
+<!--            <TextView-->
+<!--                android:id="@+id/shopTitle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:text="Negozio"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="24dp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-            <TextView
-                android:id="@+id/orderBy"
-                android:layout_width="150dp"
-                android:layout_height="24dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="32dp"
-                android:paddingTop="2dp"
-                android:text="Ordina per"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:background="@drawable/rounded_outline_edittext"
-                android:backgroundTint="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/shopTitle" />
+<!--            <TextView-->
+<!--                android:id="@+id/filter"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:paddingTop="2dp"-->
+<!--                android:background="@drawable/rounded_outline_edittext"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:text="Filtri"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/shopTitle" />-->
 
-            <ImageView
-                android:id="@+id/product1"
-                android:layout_width="wrap_content"
-                android:layout_height="250dp"
-                android:layout_marginTop="32dp"
-                android:src="@drawable/chinotto"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/filter" />
+<!--            <TextView-->
+<!--                android:id="@+id/orderBy"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:paddingTop="2dp"-->
+<!--                android:text="Ordina per"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:background="@drawable/rounded_outline_edittext"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/shopTitle" />-->
 
-            <TextView
-                android:id="@+id/productText1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Liquore al chinotto"
-                android:textColor="@color/white"
-                android:textSize="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product1" />
+<!--            <ImageView-->
+<!--                android:id="@+id/product1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="250dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:src="@drawable/chinotto"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/filter" />-->
 
-            <TextView
-                android:id="@+id/price1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="€ 20,50"
-                android:textColor="@color/white"
-                android:textSize="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productText1" />
+<!--            <TextView-->
+<!--                android:id="@+id/productText1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Liquore al chinotto"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="24dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/product1" />-->
 
-            <ImageView
-                android:id="@+id/product2"
-                android:layout_width="wrap_content"
-                android:layout_height="250dp"
-                android:layout_marginTop="32dp"
-                android:src="@drawable/camomilla"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/price1" />
+<!--            <TextView-->
+<!--                android:id="@+id/price1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="€ 20,50"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="24dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/productText1" />-->
 
-            <TextView
-                android:id="@+id/productText2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Liquore alla camomilla"
-                android:textColor="@color/white"
-                android:textSize="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product2" />
+<!--            <ImageView-->
+<!--                android:id="@+id/product2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="250dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:src="@drawable/camomilla"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/price1" />-->
 
-            <TextView
-                android:id="@+id/price2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="€ 20,50"
-                android:textColor="@color/white"
-                android:textSize="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productText2" />
+<!--            <TextView-->
+<!--                android:id="@+id/productText2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Liquore alla camomilla"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="24dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/product2" />-->
 
-            <ImageView
-                android:id="@+id/product3"
-                android:layout_width="wrap_content"
-                android:layout_height="250dp"
-                android:layout_marginTop="32dp"
-                android:src="@drawable/violetta"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/price2" />
+<!--            <TextView-->
+<!--                android:id="@+id/price2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="€ 20,50"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="24dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/productText2" />-->
 
-            <TextView
-                android:id="@+id/productText3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Liquore alla violetta"
-                android:textColor="@color/white"
-                android:textSize="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product3" />
+<!--            <ImageView-->
+<!--                android:id="@+id/product3"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="250dp"-->
+<!--                android:layout_marginTop="32dp"-->
+<!--                android:src="@drawable/violetta"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/price2" />-->
 
-            <TextView
-                android:id="@+id/price3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="€ 20,50"
-                android:textColor="@color/white"
-                android:textSize="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/productText3" />
+<!--            <TextView-->
+<!--                android:id="@+id/productText3"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Liquore alla violetta"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="24dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/product3" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/price3"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="€ 20,50"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="24dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/productText3" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>
