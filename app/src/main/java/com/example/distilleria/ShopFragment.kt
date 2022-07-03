@@ -5,8 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.navigation.fragment.NavHostFragment
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -57,5 +56,67 @@ class ShopFragment : Fragment() {
 
            //NavHostFragment.findNavController(this).navigate(R.id.action_shopFragment_to_detailFragment)
 //        }
+
+        val spinnerLines: Spinner = view.findViewById(R.id.spinnerLines)
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter.createFromResource(
+            view.context,
+            R.array.filterLines,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            spinnerLines.adapter = adapter
+        }
+
+        val spinnerPrices: Spinner = view.findViewById(R.id.spinnerPrices)
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter.createFromResource(
+            view.context,
+            R.array.filterPrices,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            spinnerPrices.adapter = adapter
+        }
+
+        val spinnerOrderBy: Spinner = view.findViewById(R.id.spinnerOrderBy)
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter.createFromResource(
+            view.context,
+            R.array.filterOrderBy,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            spinnerOrderBy.adapter = adapter
+        }
+
+        val filterLayout = view.findViewById<LinearLayout>(R.id.filterLayout)
+        val orderByLayout = view.findViewById<LinearLayout>(R.id.orderByLayout)
+        val filter = view.findViewById<TextView>(R.id.filter)
+        val orderBy = view.findViewById<TextView>(R.id.orderBy)
+
+        filter.setOnClickListener {
+            orderByLayout.visibility = View.GONE
+            if (filterLayout.visibility == View.GONE) {
+                filterLayout.visibility = View.VISIBLE
+            } else {
+                filterLayout.visibility = View.GONE
+            }
+        }
+
+        orderBy.setOnClickListener {
+            filterLayout.visibility = View.GONE
+            if (orderByLayout.visibility == View.GONE) {
+                orderByLayout.visibility = View.VISIBLE
+            } else {
+                orderByLayout.visibility = View.GONE
+            }
+        }
     }
 }

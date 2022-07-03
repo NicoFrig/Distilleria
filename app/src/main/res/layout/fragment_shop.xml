@@ -19,57 +19,144 @@
             android:layout_height="match_parent"
             android:paddingBottom="20dp" >
 
+            <TextView
+                android:id="@+id/shopTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Negozio"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/filter"
+                android:layout_width="150dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="32dp"
+                android:paddingTop="2dp"
+                android:background="@drawable/rounded_outline_edittext"
+                android:backgroundTint="@color/white"
+                android:text="Filtri"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shopTitle" />
+
+            <TextView
+                android:id="@+id/orderBy"
+                android:layout_width="150dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="32dp"
+                android:paddingTop="2dp"
+                android:text="Ordina per"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_outline_edittext"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shopTitle" />
+
+            <LinearLayout
+                android:id="@+id/filterLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filter">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Filtri"
+                    android:textColor="#4f4f4f"
+                    android:textSize="32dp"
+                    android:textAlignment="center"/>
+
+                <Spinner
+                    android:id="@+id/spinnerLines"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerPrices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp" />
+
+                <Button
+                    android:id="@+id/filterChange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="100dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/rounded_button"
+                    android:text="Applica"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/orderByLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filter">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ordina Per"
+                    android:textColor="#4f4f4f"
+                    android:textSize="32dp"
+                    android:textAlignment="center"/>
+
+                <Spinner
+                    android:id="@+id/spinnerOrderBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp" />
+
+                <Button
+                    android:id="@+id/orderByChange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="100dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/rounded_button"
+                    android:text="Applica"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+
+            </LinearLayout>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@id/orderBy">
             </androidx.recyclerview.widget.RecyclerView>
-
-<!--            <TextView-->
-<!--                android:id="@+id/shopTitle"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="32dp"-->
-<!--                android:text="Negozio"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:textSize="24dp"-->
-<!--                android:textStyle="bold"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/filter"-->
-<!--                android:layout_width="150dp"-->
-<!--                android:layout_height="24dp"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_marginTop="32dp"-->
-<!--                android:paddingTop="2dp"-->
-<!--                android:background="@drawable/rounded_outline_edittext"-->
-<!--                android:backgroundTint="@color/white"-->
-<!--                android:text="Filtri"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textColor="@color/black"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/shopTitle" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/orderBy"-->
-<!--                android:layout_width="150dp"-->
-<!--                android:layout_height="24dp"-->
-<!--                android:layout_marginRight="16dp"-->
-<!--                android:layout_marginTop="32dp"-->
-<!--                android:paddingTop="2dp"-->
-<!--                android:text="Ordina per"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:background="@drawable/rounded_outline_edittext"-->
-<!--                android:backgroundTint="@color/white"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/shopTitle" />-->
 
 <!--            <ImageView-->
 <!--                android:id="@+id/product1"-->

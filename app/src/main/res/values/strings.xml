@@ -14,4 +14,31 @@
     <string name="links">Ci puoi trovare\nanche su\nInstagram e facebook</string>
     <string name="detailChinotto">Delizioso, elegante e unico. Liquore al chinotto che nasce dalla lunga infusione di chinotti freschi della Riviera Ligure, lavorati a mano subito dopo la raccolta. Dal colore ambrato e brillante e dalle note olfattive di vaniglia e rabarbaro, il liquore colpisce per il sapore moderatamente amaro caratterizzato da leggere note di tarassaco e fiori d’arancio.</string>
     <string name="detailChinotto2">Nel 2021, il liquore al Chinotto si aggiudica il terzo posto al concorso internazionale IWSC.</string>
+    <string-array name="filterLines">
+        <item><i><b>Linee</b></i></item>
+        <item>Amari 1890</item>
+        <item>Bèrto</item>
+        <item>Liquori Alpini</item>
+        <item>Le grappe</item>
+        <item>I Classici Italiani</item>
+        <item>Vintage</item>
+        <item>Elixir</item>
+        <item>Mr. Quail &#38; JT</item>
+    </string-array>
+    <string-array name="filterPrices">
+        <item><i><b>Prezzo</b></i></item>
+        <item>&lt; 10</item>
+        <item>&lt; 20</item>
+        <item>&lt; 30</item>
+        <item>&lt; 40</item>
+        <item>&lt; 50</item>
+        <item>&gt; 50</item>
+    </string-array>
+    <string-array name="filterOrderBy">
+        <item><i><b>Ordina per</b></i></item>
+        <item>Prezzo crescente</item>
+        <item>Prezzo decrescente</item>
+        <item>A - Z</item>
+        <item>Z - A</item>
+    </string-array>
 </resources>
