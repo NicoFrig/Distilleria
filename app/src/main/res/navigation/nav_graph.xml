@@ -12,7 +12,12 @@
         tools:layout="@layout/fragment_home_page" >
         <action
             android:id="@+id/action_homePageFragment_to_shopFragment"
-            app:destination="@id/shopFragment" />
+            app:destination="@id/shopFragment" >
+            <argument
+                android:name="title"
+                app:argType="string"
+                android:defaultValue="all"/>
+        </action>
     </fragment>
     <fragment
         android:id="@+id/shopFragment"
@@ -22,6 +27,10 @@
         <action
             android:id="@+id/action_shopFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="all" />
     </fragment>
     <fragment
         android:id="@+id/infoFragment"

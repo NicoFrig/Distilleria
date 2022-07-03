@@ -73,7 +73,7 @@ class LiquorAdapter(private val liquorList: ArrayList<LiquorItem>, private val c
                 }
             }
             holder.view.setOnClickListener {
-                mListener?.selectItem(position)
+                mListener?.selectItem(holder.titolo1.text.toString())
 //           Navigation.createNavigateOnClickListener(R.id.action_homePageFragment_to_shopFragment)
 //            //NavHostFragment.findNavController().navigate(R.id.action_homePageFragment_to_shopFragment)
             }
@@ -82,7 +82,7 @@ class LiquorAdapter(private val liquorList: ArrayList<LiquorItem>, private val c
     override fun getItemCount() = liquorList.size
 
     interface AdapterCallback {
-        fun selectItem(position: Int)
+        fun selectItem(title: String)
     }
 
     private var mListener: AdapterCallback? = null
