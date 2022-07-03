@@ -3,7 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
     id 'androidx.navigation.safeargs.kotlin'
+
 }
+
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdk 32

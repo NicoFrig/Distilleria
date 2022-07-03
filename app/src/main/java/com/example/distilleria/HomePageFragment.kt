@@ -1,15 +1,18 @@
 package com.example.distilleria
 
 import android.app.AlertDialog
+import android.icu.text.CaseMap
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -65,9 +68,10 @@ class HomePageFragment : Fragment() {
                     val recycleView = view.findViewById<RecyclerView>(R.id.recycle)
                     val adapter = LiquorAdapter(liquorList,requireActivity())
                     adapter.setOnCallback(object: LiquorAdapter.AdapterCallback{
-                        override fun selectItem(position: Int){
-                            NavHostFragment.findNavController(this@HomePageFragment).navigate(R.id.action_homePageFragment_to_shopFragment)
-                            //Toast.makeText(requireContext(), "Cliccato", Toast.LENGTH_SHORT).show()
+                        override fun selectItem(title:String){
+                            val action = HomePageFragmentDirections.actionHomePageFragmentToShopFragment(title)
+                            NavHostFragment.findNavController(this@HomePageFragment).navigate(action)
+                            //Toast.makeText(requireContext(), title, Toast.LENGTH_SHORT).show()
                         }
                     })
                     recycleView.adapter = adapter
