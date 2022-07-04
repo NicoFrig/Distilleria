@@ -57,14 +57,22 @@ class ShopFragment : Fragment() {
 
 //        prod = view.findViewById(R.id.product1)
         val db = Firebase.firestore
-        db.collection(args.title).get().addOnSuccessListener { documents ->
-            for(document in documents){
-                var title = document["nome"].toString()
-                var price = document["prezzo"].toString()
-                val nuovoShop = ShopItem(title,price)
+        shopList.clear()
+        db.collection(args.title).get().addOnSuccessListener {
+            for(doc in it){
+                var idDoc = doc.id
+                var title = doc["nome"].toString()
+                var price = doc["prezzo"].toString()+"€"
+                val nuovoShop = ShopItem(title,price,idDoc,args.title)
                 shopList.add(nuovoShop)
                 val recycleView = view.findViewById<RecyclerView>(R.id.recycle)
                 val adapter = ShopAdapter(shopList,requireActivity())
+                adapter.setOnCallback(object: ShopAdapter.AdapterCallback{
+                    override fun selectItem(idDoc: String, collection: String) {
+                        val action = ShopFragmentDirections.actionShopFragmentToDetailFragment(idDoc,collection)
+                        NavHostFragment.findNavController(this@ShopFragment).navigate(action)
+                    }
+                })
                 recycleView.adapter = adapter
                 recycleView.layoutManager=LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
             }
