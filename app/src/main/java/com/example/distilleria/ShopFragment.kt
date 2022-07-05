@@ -57,6 +57,12 @@ class ShopFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 //        prod = view.findViewById(R.id.product1)
         val db = Firebase.firestore
+
+        val filterLayout = view.findViewById<LinearLayout>(R.id.filterLayout)
+        val orderByLayout = view.findViewById<LinearLayout>(R.id.orderByLayout)
+        val filter = view.findViewById<TextView>(R.id.filter)
+        val orderBy = view.findViewById<TextView>(R.id.orderBy)
+
         shopList.clear()
         db.collection(args.title).get().addOnSuccessListener {
             for(doc in it){
@@ -69,8 +75,10 @@ class ShopFragment : Fragment() {
                 val adapter = ShopAdapter(shopList,requireActivity())
                 adapter.setOnCallback(object: ShopAdapter.AdapterCallback{
                     override fun selectItem(idDoc: String, collection: String) {
-                        val action = ShopFragmentDirections.actionShopFragmentToDetailFragment(idDoc,collection)
-                        NavHostFragment.findNavController(this@ShopFragment).navigate(action)
+                        if (filterLayout.visibility == View.GONE && orderByLayout.visibility == View.GONE) {
+                            val action = ShopFragmentDirections.actionShopFragmentToDetailFragment(idDoc,collection)
+                            NavHostFragment.findNavController(this@ShopFragment).navigate(action)
+                        }
                     }
                 })
                 recycleView.adapter = adapter
@@ -124,11 +132,6 @@ class ShopFragment : Fragment() {
             // Apply the adapter to the spinner
             spinnerOrderBy.adapter = adapter
         }
-
-        val filterLayout = view.findViewById<LinearLayout>(R.id.filterLayout)
-        val orderByLayout = view.findViewById<LinearLayout>(R.id.orderByLayout)
-        val filter = view.findViewById<TextView>(R.id.filter)
-        val orderBy = view.findViewById<TextView>(R.id.orderBy)
 
         filter.setOnClickListener {
             orderByLayout.visibility = View.GONE
