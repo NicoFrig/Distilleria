@@ -15,10 +15,6 @@
         android:icon="@drawable/ic_baseline_shopping_cart_24"
         android:title="Carrello" />
 
-    <item
-        android:id="@+id/settings"
-        android:icon="@drawable/ic_baseline_settings_24"
-        android:title="Impostazioni" />
 
     <item
         android:id="@+id/infoFragment"

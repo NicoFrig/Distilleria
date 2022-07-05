@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home_page" >
         <action
             android:id="@+id/action_homePageFragment_to_shopFragment"
-            app:destination="@id/shopFragment" >
+            app:destination="@id/shopFragment">
             <argument
                 android:name="title"
                 app:argType="string"
@@ -26,7 +26,14 @@
         tools:layout="@layout/fragment_shop" >
         <action
             android:id="@+id/action_shopFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment" >
+            <argument
+                android:name="idDoc"
+                app:argType="string"/>
+            <argument
+                android:name="collection"
+                app:argType="string"/>
+        </action>
         <argument
             android:name="title"
             app:argType="string"
@@ -45,7 +52,13 @@
         tools:layout="@layout/fragment_detail" >
         <action
             android:id="@+id/action_detailFragment_to_shopFragment"
-            app:destination="@id/shopFragment" />
+            app:popUpTo="@id/shopFragment"/>
+        <argument
+            android:name="idDoc"
+            app:argType="string"/>
+        <argument
+            android:name="collection"
+            app:argType="string"/>
     </fragment>
 
     <fragment
